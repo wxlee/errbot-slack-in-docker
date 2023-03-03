@@ -10,7 +10,9 @@ docker run -d -p 3333:22 -v /opt/data:/mnt/data --name my-errbot errbot-slack
 
 ## Setup Config
 
-Change the setting of following file
+Login and change the setting of following file
+
+docker exec -it CONTAINER_ID bash
 
 /etc/supervisor/conf.d/errbot.conf
 
@@ -19,7 +21,6 @@ Change the setting of following file
 
 ## Run it
 ```bash
-systemctl enable supervisor
-systemctl restart supervisor
+/etc/init.d/supervisor start
 ```
 
