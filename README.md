@@ -1,5 +1,11 @@
 # Errbot + Slack
 
+Docker version 23.0.1
+
+Docker Compose version v2.16.0
+
+
+
 ## Build up docker image
 ```bash
 git clone https://github.com/wxlee/errbot-slack-in-docker.git
