@@ -15,9 +15,9 @@ docker build --no-cache -t errbot-slack .
 
 ## Create Env variables
 ```bash
-mkdir ../env-file/
+mkdir ../env_file/
 
-vim ../env-file/errbot.env
+vim ../env_file/errbot.env
 
 # tokens
 # jenkins api
