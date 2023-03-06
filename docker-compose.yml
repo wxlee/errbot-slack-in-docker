@@ -1,0 +1,18 @@
+version: "3"
+services:
+  app:
+    image: errbot_slack
+    container_name: errbot
+    build:
+      context: .
+    restart: always
+    env_file:
+      - ../env_file/errbot.env 
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 128M

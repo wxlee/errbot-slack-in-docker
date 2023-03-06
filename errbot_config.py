@@ -1,9 +1,13 @@
 import logging
+import os
+
+bot_id = os.environ.get('BOT_TOKEN')
 
 BACKEND = "SlackV3"  # Errbot will start in text mode (console only mode) and will answer commands from there.
 BOT_EXTRA_BACKEND_DIR="/home/errbotuser/chatops/backend"
 
 BOT_IDENTITY = {
+	'token': bot_id
 }
 
 
