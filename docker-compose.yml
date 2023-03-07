@@ -19,6 +19,9 @@ services:
         reservations:
           cpus: '0.5'
           memory: 128M
+    volumes:
+      - '~/container_errbot:/home/errbotuser/chatops/host_vol'
+    user: "errbotuser:errbotuser"
     logging:
       driver: syslog
       options:
