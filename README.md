@@ -58,3 +58,25 @@ git clone YOUR_PLUGIN
 docker-compose restart app
 ```
 
+## Volumes for plugin develop
+
+If you run docker-compose using root, you need to change the owner of folder on HOST.
+
+```bash
+chown 1000:1000 -R ~/container_errbot
+```
+
+And create link to plugin path in container.
+```bash
+cd ~/chatops/host_vol
+git clone YOUR_PLUGINS
+
+cd ~/chatops/plugins
+ln -s ../host_vol/YOUR_PLUGINS YOUR_PLUGINS
+```
+
+Restart App
+```bash
+docker-compose restart app
+```
+

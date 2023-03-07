@@ -21,7 +21,7 @@ services:
           memory: 128M
     volumes:
       - '~/container_errbot:/home/errbotuser/chatops/host_vol'
-    user: "errbotuser:errbotuser"
+    user: "1000:1000"
     logging:
       driver: syslog
       options:
