@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    image: errbot_slack
+    image: errbot-slack
     container_name: errbot
     build:
       context: .
