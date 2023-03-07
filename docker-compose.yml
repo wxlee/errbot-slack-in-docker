@@ -8,6 +8,9 @@ services:
     restart: always
     env_file:
       - ../env_file/errbot.env 
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
     deploy:
       resources:
         limits:
@@ -16,3 +19,7 @@ services:
         reservations:
           cpus: '0.5'
           memory: 128M
+    logging:
+      driver: syslog
+      options:
+        tag: "{{.Name}}.{{.ID}}"
